@@ -10,3 +10,10 @@ describe 'translate', ->
         assert.equal(ret, '你好世界')
         done()
       )
+
+    it '你好世界', (done) ->
+      trans("你好世界", "zh-CN", "en", (error, ret) ->
+        assert.ifError(error)
+        assert.equal(ret, 'Hello world')
+        done()
+      )

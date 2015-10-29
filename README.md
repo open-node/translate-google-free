@@ -1,6 +1,6 @@
-## open-cache ![NPM version](https://img.shields.io/npm/v/open-cache.svg?style=flat)
+## translate-google-free
 
-Cache by redis, easy use. Include functions get/set/del.
+Translate text by google free service
 
 ### Installation
 ```bash
@@ -10,7 +10,10 @@ $ npm install translate-google-free --save
 ### Example
 ```js
 var trans = require('translate-google-free');
-trans('Hello world', 'en
+trans('Hello world', 'en', 'zh-CN', function(error, ret) {
+  if (error) throw error;
+  console.log(ret);
+});
 ```
 
 ### MIT license
